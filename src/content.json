@@ -1,0 +1,92 @@
+{
+    "site_info": {
+        "title": "Roraima Soluciones | Climatización y Refrigeración en Santiago",
+        "description": "Expertos en instalación y reparación de Aire Acondicionado y Cámaras Frigoríficas. Servicio técnico certificado en todo Santiago. ¡Cotiza aquí!",
+        "keywords": "aire acondicionado, climatización, refrigeración, cámaras frigoríficas, servicio técnico, santiago"
+    },
+    "contact_info": {
+        "phone": "+56 9 93460120",
+        "whatsapp_url": "https://wa.me/56993460120",
+        "email": "contacto@roraimasoluciones.cl",
+        "address": "Cobertura en toda la Región Metropolitana",
+        "description": "¿Necesitas una solución rápida y eficiente en climatización o refrigeración? Contáctanos y uno de nuestros asesores se pondrá en comunicación contigo a la brevedad."
+    },
+    "hero_content": {
+        "expert_badge": "❄️ Expertos en Cadena de Frío",
+        "main_heading": "Climatización y Refrigeración de Alto Nivel",
+        "sub_heading": "Instalación y mantenimiento con el respaldo de un equipo comprometido con tu tranquilidad.",
+        "cta_buttons": [
+            {
+                "text": "Cotizar Ahora",
+                "link": "#contacto"
+            },
+            {
+                "text": "Ver Servicios",
+                "link": "#servicios"
+            }
+        ]
+    },
+    "services": [
+        {
+            "title": "Aire Acondicionado",
+            "description": "Instalación y mantención de equipos de climatización para hogar y empresas. Eficiencia energética garantizada."
+        },
+        {
+            "title": "Cámaras Frigoríficas",
+            "description": "Servicio técnico especializado en refrigeración industrial. Reparación y mantenimiento preventivo."
+        },
+        {
+            "title": "Proyectos de Ventilación",
+            "description": "Diseño e implementación de sistemas de ventilación y extracción de aire para espacios comerciales."
+        }
+    ],
+    "why_choose_us": {
+        "title": "¿Por qué elegir Roraima?",
+        "description": "Entendemos que una falla en su equipo de refrigeración no es solo un inconveniente, es una pérdida de dinero. Por eso actuamos con rapidez y precisión.",
+        "features": [
+            {
+                "title": "Transparencia Total",
+                "description": "Presupuestos claros, sin sorpresas."
+            },
+            {
+                "title": "Expertos en Frío",
+                "description": "Técnicos certificados."
+            },
+            {
+                "title": "Garantía Real",
+                "description": "Respaldamos cada trabajo."
+            },
+            {
+                "title": "Rapidez",
+                "description": "Respuesta inmediata."
+            }
+        ],
+        "about_text": "\"En Roraima Soluciones somos una empresa joven y dinámica dedicada a la climatización integral. Nacemos con la misión de ofrecer un servicio técnico transparente, eficiente y honesto.\""
+    },
+    "testimonials": [
+        {
+            "name": "Carlos Méndez",
+            "role": "Dueño de Restaurante",
+            "text": "Roraima nos salvó cuando nuestra cámara frigorífica falló un sábado por la noche. Llegaron en 1 hora. Servicio impecable.",
+            "stars": 5
+        },
+        {
+            "name": "Ana Patricia López",
+            "role": "Administradora Edificio",
+            "text": "Excelente servicio de mantención para los aires acondicionados del edificio. Muy prolijos y puntuales.",
+            "stars": 5
+        }
+    ],
+    "footer_info": {
+        "services_list": [
+            "Aire Acondicionado",
+            "Cámaras Frigoríficas",
+            "Mantención Preventiva"
+        ],
+        "location_details": [
+            "Santiago, RM",
+            "Cobertura en todas las comunas"
+        ],
+        "copyright": "© 2025 Roraima Soluciones. Todos los derechos reservados."
+    }
+}

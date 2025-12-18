@@ -1,0 +1,103 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.magic-bento-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Lighter border for light mode */
+    background-color: #ffffff;
+    /* Default white background */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.magic-bento-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(var(--glow-color), 0.15),
+            transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.magic-bento-card--border-glow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    /* border width */
+    background: radial-gradient(600px circle at var(--glow-x) var(--glow-y),
+            rgba(var(--glow-color), 0.6),
+            transparent 40%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.magic-bento-card__header {
+    z-index: 10;
+    position: relative;
+}
+
+.magic-bento-card__label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #64748b;
+    /* Slate-500 */
+}
+
+.magic-bento-card__content {
+    z-index: 10;
+    position: relative;
+}
+
+.magic-bento-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+    /* Slate-800 */
+}
+
+.magic-bento-card__description {
+    font-size: 0.875rem;
+    color: #64748b;
+    /* Slate-500 */
+    line-height: 1.5;
+}
+
+.magic-bento-card--text-autohide .magic-bento-card__description {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease-out;
+}
+
+.magic-bento-card:hover .magic-bento-card__description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.particle {
+    pointer-events: none;
+}
