@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Wind, ThermometerSnowflake, Fan } from 'lucide-react';
-import content from '../content.json';
+import { useContent } from '../context/ContentContext';
 import acImage from '../assets/service_ac_split.png';
 import coldRoomImage from '../assets/service_cold_room.png';
 import ventilationImage from '../assets/service_ventilation.png';
 
 const Services = () => {
+    const { content } = useContent();
     const images = [acImage, coldRoomImage, ventilationImage];
     const icons = [Wind, ThermometerSnowflake, Fan];
 

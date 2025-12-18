@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, ThermometerSnowflake } from 'lucide-react';
-import content from '../content.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.png';
+import { useContent } from '../context/ContentContext';
 
 const Navbar = () => {
+    const { content } = useContent();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 

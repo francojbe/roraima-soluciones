@@ -1,17 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronRight, Star } from 'lucide-react';
-import content from '../content.json';
+import { useContent } from '../context/ContentContext';
 import heroBg from '../assets/hero_background.png';
 import SplitText from './SplitText';
 
 const Hero = () => {
+    const { content } = useContent();
+
     return (
         <section id="inicio" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src={heroBg}
+                    src={content.hero_content.background_image_url || heroBg}
                     alt="Technical team"
                     className="w-full h-full object-cover"
                 />

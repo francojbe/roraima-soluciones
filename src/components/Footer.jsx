@@ -1,8 +1,9 @@
 import React from 'react';
 import { ThermometerSnowflake } from 'lucide-react';
-import content from '../content.json';
+import { useContent } from '../context/ContentContext';
 
 const Footer = () => {
+    const { content } = useContent();
     return (
         <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
             <div className="container mx-auto px-4">

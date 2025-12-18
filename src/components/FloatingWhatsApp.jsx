@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import content from '../content.json';
+import { useContent } from '../context/ContentContext';
 import whatsappLogo from '../assets/whatsapp_logo.png';
 
 const FloatingWhatsApp = () => {
+    const { content } = useContent();
     return (
         <motion.a
             href={content.contact_info.whatsapp_url}

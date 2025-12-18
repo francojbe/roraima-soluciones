@@ -15,15 +15,27 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Stage 2: Serve with Nginx
-FROM nginx:alpine
+# Stage 2: Serve with Node.js
+FROM node:20-alpine
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Copy built assets from builder stage
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy package files (for production install of server deps)
+COPY package*.json ./
 
-EXPOSE 80
+# Install ONLY production dependencies (no dev deps like vite)
+RUN npm install --omit=dev --legacy-peer-deps
 
-CMD ["nginx", "-g", "daemon off;"]
+# Copy server code
+COPY server ./server
+
+# Copy built frontend from build stage
+COPY --from=build /app/dist ./dist
+
+# Create uploads directory
+RUN mkdir -p /app/data/uploads
+
+ENV PORT=3000
+EXPOSE 3000
+
+CMD ["node", "server/index.js"]

@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-import content from '../content.json';
+import { useContent } from '../context/ContentContext';
 
 const Testimonials = () => {
+    const { content } = useContent();
     return (
         <section id="testimonios" className="py-20 bg-slate-900 text-white relative isolate overflow-hidden">
             {/* Background effects */}

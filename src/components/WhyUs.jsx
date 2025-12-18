@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Award, Clock, ShieldCheck } from 'lucide-react';
-import content from '../content.json';
+import { useContent } from '../context/ContentContext';
 import MagicBento from './MagicBento';
 
 const WhyUs = () => {
+    const { content } = useContent();
     const icons = [CheckCircle2, Award, ShieldCheck, Clock];
 
     return (

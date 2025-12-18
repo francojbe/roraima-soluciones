@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import content from '../content.json';
+import { useContent } from '../context/ContentContext';
 
 const Contact = () => {
+    const { content } = useContent();
     return (
         <section id="contacto" className="py-20 bg-slate-50">
             <div className="container mx-auto px-4">
