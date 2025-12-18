@@ -49,7 +49,7 @@ const Services = () => {
                                 <div className="h-48 overflow-hidden relative">
                                     <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10" />
                                     <img
-                                        src={images[index]}
+                                        src={service.image_url || images[index]}
                                         alt={service.title}
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                                     />

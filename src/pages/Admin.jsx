@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LogOut, Save, Layers, Layout, Type } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
-import ImageUpload from '../components/admin/ImageUpload';
+import MediaUpload from '../components/admin/MediaUpload';
 
 const Admin = () => {
     const { content, updateContent, refreshContent } = useContent();
@@ -125,11 +125,14 @@ const Admin = () => {
             </div>
 
             <div className="border-t pt-4 mt-4">
-                <h4 className="font-semibold mb-3">Imagen de Fondo</h4>
-                <ImageUpload
-                    label="Subir nueva imagen"
-                    currentImage={localContent.hero_content?.background_image_url}
-                    onImageChange={(url) => updateNested('hero_content.background_image_url', url)}
+                <h4 className="font-semibold mb-3">Fondo (Imagen o Video)</h4>
+                <div className="bg-blue-50 p-4 rounded-lg mb-4 text-sm text-blue-800">
+                    Puede subir una imagen (.jpg, .png) o un video (.mp4, .webm). Los videos se reproducirán automáticamente en bucle.
+                </div>
+                <MediaUpload
+                    label="Subir archivo"
+                    currentMedia={localContent.hero_content?.background_image_url}
+                    onMediaChange={(url) => updateNested('hero_content.background_image_url', url)}
                 />
             </div>
         </div>
@@ -138,13 +141,13 @@ const Admin = () => {
     const renderServicesEditor = () => (
         <div className="space-y-6">
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2"><Layers size={20} /> Servicios</h3>
-            <p className="text-sm text-slate-500 mb-4">Edite el título y descripción de sus servicios.</p>
+            <p className="text-sm text-slate-500 mb-4">Edite el título, descripción e imagen de sus servicios.</p>
 
             <div className="space-y-6">
                 {localContent.services?.map((service, index) => (
                     <div key={index} className="bg-slate-50 p-4 rounded-lg border border-slate-200">
                         <h4 className="font-semibold mb-3 text-blue-800">Servicio #{index + 1}</h4>
-                        <div className="space-y-3">
+                        <div className="space-y-4">
                             <div>
                                 <label className="block text-xs font-bold uppercase text-slate-500 mb-1">Título</label>
                                 <input
@@ -161,6 +164,14 @@ const Admin = () => {
                                     value={service.description || ''}
                                     onChange={(e) => updateArrayItem('services', index, 'description', e.target.value)}
                                     className="w-full p-2 border rounded bg-white"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-xs font-bold uppercase text-slate-500 mb-1">Imagen del Servicio</label>
+                                <MediaUpload
+                                    label="Cambiar Imagen"
+                                    currentMedia={service.image_url}
+                                    onMediaChange={(url) => updateArrayItem('services', index, 'image_url', url)}
                                 />
                             </div>
                         </div>

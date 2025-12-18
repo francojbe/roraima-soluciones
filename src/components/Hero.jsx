@@ -10,13 +10,24 @@ const Hero = () => {
 
     return (
         <section id="inicio" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-            {/* Background Image with Overlay */}
+            {/* Background (Image or Video) with Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={content.hero_content.background_image_url || heroBg}
-                    alt="Technical team"
-                    className="w-full h-full object-cover"
-                />
+                {content.hero_content.background_image_url && ['mp4', 'webm'].some(ext => content.hero_content.background_image_url.toLowerCase().endsWith(ext)) ? (
+                    <video
+                        src={content.hero_content.background_image_url}
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                ) : (
+                    <img
+                        src={content.hero_content.background_image_url || heroBg}
+                        alt="Technical team"
+                        className="w-full h-full object-cover"
+                    />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/30" />
             </div>
 
