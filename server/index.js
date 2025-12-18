@@ -21,7 +21,7 @@ app.use(express.json());
 const DATA_DIR = path.join(__dirname, '../data');
 const UPLOADS_DIR = path.join(DATA_DIR, 'uploads');
 const CONTENT_FILE = path.join(DATA_DIR, 'content.json');
-const DEFAULT_CONTENT_FILE = path.join(__dirname, '../src/content.json');
+const DEFAULT_CONTENT_FILE = path.join(__dirname, 'content.json');
 
 // Ensure data content and uploads directories exist
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR);
