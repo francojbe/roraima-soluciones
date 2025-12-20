@@ -1,26 +1,19 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useContent } from '../context/ContentContext';
+import { MessageCircle } from 'lucide-react';
 import whatsappLogo from '../assets/whatsapp_logo.png';
 
 const FloatingWhatsApp = () => {
-    const { content } = useContent();
     return (
-        <motion.a
-            href={content.contact_info.whatsapp_url}
+        <a
+            href="https://wa.me/56993460120"
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.3 }}
-            className="fixed bottom-6 right-6 z-50 transition-all duration-300 hover:scale-110 focus:outline-none"
-            aria-label="Chat on WhatsApp"
+            className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-105 hover:shadow-green-500/30 animate-in fade-in zoom-in duration-500"
+            aria-label="Contactar por WhatsApp"
         >
-            <img src={whatsappLogo} alt="WhatsApp" className="w-16 h-16 drop-shadow-lg" />
-            <span className="absolute right-full top-1/2 -translate-y-1/2 mr-4 bg-white px-3 py-1 rounded-lg text-sm font-semibold text-slate-700 shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none hidden md:block">
-                ¡Hablemos!
-            </span>
-        </motion.a>
+            <img src={whatsappLogo} alt="WhatsApp" className="w-8 h-8" />
+            <span className="font-semibold hidden sm:inline">¿Consultas?</span>
+        </a>
     );
 };
 

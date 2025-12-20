@@ -1,86 +1,65 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
-import { useContent } from '../context/ContentContext';
+import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
 const Contact = () => {
-    const { content } = useContent();
     return (
-        <section id="contacto" className="py-20 bg-slate-50">
-            <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div className="grid md:grid-cols-2">
-                        <div className="p-10 bg-blue-600 text-white flex flex-col justify-between">
-                            <div>
-                                <h3 className="text-2xl font-bold mb-6">Información de Contacto</h3>
-                                <p className="mb-10 text-blue-100">
-                                    {content.contact_info.description}
-                                </p>
+        <footer id="contact" className="bg-slate-900 text-slate-300 pt-20 pb-10">
+            <div className="container mx-auto px-6">
+                <div className="grid lg:grid-cols-3 gap-12 mb-16">
 
-                                <div className="space-y-6">
-                                    <a href={`tel:${content.contact_info.phone}`} className="flex items-center gap-4 hover:translate-x-1 transition-transform">
-                                        <div className="w-10 h-10 bg-blue-500/50 rounded-lg flex items-center justify-center">
-                                            <Phone size={20} />
-                                        </div>
-                                        <span>{content.contact_info.phone}</span>
-                                    </a>
-
-                                    <a href={`mailto:${content.contact_info.email}`} className="flex items-center gap-4 hover:translate-x-1 transition-transform">
-                                        <div className="w-10 h-10 bg-blue-500/50 rounded-lg flex items-center justify-center">
-                                            <Mail size={20} />
-                                        </div>
-                                        <span>{content.contact_info.email}</span>
-                                    </a>
-
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 bg-blue-500/50 rounded-lg flex items-center justify-center">
-                                            <MapPin size={20} />
-                                        </div>
-                                        <span>{content.contact_info.address}</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-10 md:mt-0">
-                                <div className="w-full h-48 md:h-64 rounded-lg overflow-hidden shadow-lg border-2 border-white/20">
-                                    <iframe
-                                        title="Ubicación Roraima Soluciones"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.073439974558!2d-70.6482736848008!3d-33.43777568077582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5410425af2f%3A0x8475d53c400f0931!2sSantiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1715012345678!5m2!1ses!2scl"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen=""
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                    ></iframe>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="p-10">
-                            <h3 className="text-2xl font-bold text-slate-800 mb-6">Cotice con Nosotros</h3>
-                            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-1">Nombre</label>
-                                    <input type="text" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Su nombre" />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-1">Teléfono</label>
-                                    <input type="tel" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="+56 9..." />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-1">Mensaje</label>
-                                    <textarea rows="4" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="¿En qué podemos ayudarle?"></textarea>
-                                </div>
-                                <button type="submit" className="w-full btn-primary bg-slate-900 hover:bg-slate-800 text-white">
-                                    Enviar Mensaje
-                                </button>
-                            </form>
+                    {/* Brand Info */}
+                    <div>
+                        <h3 className="text-2xl font-bold text-white mb-6">Roraima<span className="text-blue-500">.</span></h3>
+                        <p className="text-slate-400 mb-6 leading-relaxed">
+                            Servicios de climatización y refrigeración con un enfoque humano.
+                            Llevamos confort a tu hogar con la calidad que mereces.
+                        </p>
+                        <div className="flex gap-4">
+                            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors text-white">
+                                <Instagram size={20} />
+                            </a>
+                            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors text-white">
+                                <Facebook size={20} />
+                            </a>
                         </div>
                     </div>
+
+                    {/* Quick Links */}
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-6">Enlaces Rápidos</h4>
+                        <ul className="space-y-3">
+                            <li><a href="#hero" className="hover:text-blue-400 transition-colors">Inicio</a></li>
+                            <li><a href="#services" className="hover:text-blue-400 transition-colors">Servicios</a></li>
+                            <li><a href="#trust" className="hover:text-blue-400 transition-colors">Nosotros</a></li>
+                            <li><a href="/login" className="hover:text-blue-400 transition-colors">Acceso Clientes / Admin</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div>
+                        <h4 className="text-lg font-bold text-white mb-6">Contáctanos</h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3">
+                                <Phone size={20} className="text-blue-500 mt-1" />
+                                <span>+56 9 9346 0120<br /><span className="text-sm text-slate-500">Lunes a Sábado 9:00 - 19:00</span></span>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <Mail size={20} className="text-blue-500" />
+                                <a href="mailto:contacto@roraimasoluciones.cl" className="hover:text-blue-400 transition-colors">contacto@roraimasoluciones.cl</a>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <MapPin size={20} className="text-blue-500 mt-1" />
+                                <span>Santiago, Chile<br /><span className="text-sm text-slate-500">Cobertura en toda la región metropolitana</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
+                    <p>&copy; {new Date().getFullYear()} Roraima Soluciones. Todos los derechos reservados.</p>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 };
 

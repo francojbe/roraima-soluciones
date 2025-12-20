@@ -3,8 +3,8 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
-import WhyUs from '../components/WhyUs';
-import Testimonials from '../components/Testimonials';
+import TrustSection from '../components/TrustSection';
+import ContactForm from '../components/ContactForm';
 import Contact from '../components/Contact';
 import { useContent } from '../context/ContentContext';
 
@@ -20,8 +20,8 @@ const Landing = () => {
             />
             <Hero />
             <Services />
-            <WhyUs />
-            <Testimonials />
+            <TrustSection />
+            <ContactForm />
             <Contact />
         </Layout>
     );
