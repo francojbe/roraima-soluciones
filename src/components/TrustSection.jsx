@@ -12,8 +12,9 @@ const TrustSection = () => {
                         <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply md:hidden"></div>
                         <img
                             src="/img-trust.png"
-                            alt="Servicio de confianza"
+                            alt="Técnico profesional de Roraima Soluciones realizando mantenimiento"
                             className="w-full h-full object-cover rounded-2xl"
+                            loading="lazy"
                         />
                     </div>
                     {/* Badge */}

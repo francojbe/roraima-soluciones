@@ -9,7 +9,12 @@ const ServiceCard = ({ title, description, icon: Icon, image, features = [], del
         >
             {image ? (
                 <div className="h-48 overflow-hidden relative">
-                    <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        loading="lazy"
+                    />
                     <div className="absolute inset-0 bg-blue-900/10"></div>
                 </div>
             ) : (

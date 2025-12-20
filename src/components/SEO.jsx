@@ -61,7 +61,41 @@ const SEO = ({ title, description, keywords }) => {
                         "sameAs": [
                             "https://instagram.com/roraimasoluciones", 
                             "https://facebook.com/roraimasoluciones"
-                        ]
+                        ],
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Servicios de Climatización y Refrigeración",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Instalación y Reparación de Aire Acondicionado"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Servicio Técnico de Refrigeradores"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Mantenimiento Preventivo de Climatización"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Proyectos de Ventilación y Hogar"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 `}
             </script>

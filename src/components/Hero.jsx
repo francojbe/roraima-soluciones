@@ -9,8 +9,10 @@ const Hero = () => {
                 {/* Fallback image from Unsplash - Cozy Living Room */}
                 <img
                     src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop"
-                    alt="Cozy living room"
+                    alt="Sala de estar moderna climatizada con aire acondicionado residencial"
                     className="w-full h-full object-cover"
+                    loading="eager"
+                    fetchpriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/20"></div>
             </div>
