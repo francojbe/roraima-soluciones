@@ -9,14 +9,27 @@
   <meta name="description"
     content="Expertos en aire acondicionado residencial y reparación de refrigeradores a domicilio. Servicio técnico confiable, cercano y garantizado en Santiago." />
   <meta name="keywords"
-    content="Roraima Soluciones, aire acondicionado hogar, instalación aire acondicionado, reparación refrigeradores, servicio técnico a domicilio, santiago" />
+    content="Roraima Soluciones, aire acondicionado hogar, instalación aire acondicionado, reparación refrigeradores, servicio técnico a domicilio, santiago, climatización residencial" />
   <meta name="author" content="Roraima Soluciones" />
-  <meta property="og:title" content="Roraima Soluciones | Climatización de Hogar" />
+  <link rel="canonical" href="https://roraimasoluciones.cl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roraima Soluciones | Climatización de Hogar y Refrigeración" />
   <meta property="og:description"
     content="Expertos en aire acondicionado residencial y reparación de refrigeradores. Servicio técnico garantizado en Santiago." />
-  <meta property="og:image" content="/img-hero.png" />
+  <meta property="og:image" content="https://roraimasoluciones.cl/img-hero.png" />
   <meta property="og:url" content="https://roraimasoluciones.cl/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roraima Soluciones | Climatización de Hogar y Refrigeración" />
+  <meta name="twitter:description"
+    content="Expertos en aire acondicionado residencial y reparación de refrigeradores a domicilio en Santiago de Chile." />
+  <meta name="twitter:image" content="https://roraimasoluciones.cl/img-hero.png" />
+
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -25,12 +38,14 @@
       "image": "https://roraimasoluciones.cl/img-hero.png",
       "@id": "https://roraimasoluciones.cl",
       "url": "https://roraimasoluciones.cl",
-      "telephone": "+56912345678",
+      "telephone": "+56993460120",
+      "email": "contacto@roraimasoluciones.cl",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Santiago",
         "addressLocality": "Santiago",
-        "addressRegion": "RM",
+        "addressRegion": "Región Metropolitana",
         "postalCode": "8320000",
         "addressCountry": "CL"
       },
@@ -54,13 +69,101 @@
       },
       "sameAs": [
         "https://www.instagram.com/roraimasoluciones"
-      ]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Climatización y Refrigeración",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "Aire Acondicionado",
+            "description": "Instalación y mantención de equipos de climatización para hogar y empresas en Santiago."
+          },
+          {
+            "@type": "Service",
+            "name": "Cámaras Frigoríficas",
+            "description": "Servicio técnico especializado en refrigeración industrial y mantención de cadena de frío."
+          },
+          {
+            "@type": "Service",
+            "name": "Proyectos de Ventilación",
+            "description": "Diseño e implementación de sistemas de ventilación y extracción de aire para espacios comerciales."
+          }
+        ]
+      }
     }
   </script>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Contenido semántico pre-renderizado para motores de búsqueda, IA y accesibilidad -->
+    <header>
+      <nav aria-label="Navegación principal">
+        <a href="https://roraimasoluciones.cl/"><strong>Roraima Soluciones</strong></a>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <p>❄️ Expertos en Cadena de Frío y Climatización</p>
+        <h1>Climatización y Refrigeración de Alto Nivel en Santiago</h1>
+        <p>
+          Instalación y mantenimiento de aire acondicionado, reparación de refrigeradores y servicio técnico especializado en cámaras frigoríficas con cobertura en toda la Región Metropolitana.
+        </p>
+        <p>
+          <a href="#contacto">Cotizar Ahora</a> · <a href="#servicios">Ver Servicios</a>
+        </p>
+      </section>
+
+      <section id="servicios">
+        <h2>Nuestros Servicios Especializados</h2>
+        <article>
+          <h3>Aire Acondicionado</h3>
+          <p>Instalación y mantención de equipos de climatización para hogar y empresas. Eficiencia energética garantizada.</p>
+        </article>
+        <article>
+          <h3>Cámaras Frigoríficas</h3>
+          <p>Servicio técnico especializado en refrigeración industrial. Reparación y mantenimiento preventivo de cadena de frío.</p>
+        </article>
+        <article>
+          <h3>Proyectos de Ventilación</h3>
+          <p>Diseño e implementación de sistemas de ventilación y extracción de aire para espacios comerciales y bodegas.</p>
+        </article>
+      </section>
+
+      <section id="nosotros">
+        <h2>¿Por qué elegir Roraima Soluciones?</h2>
+        <p>
+          Entendemos que una falla en su equipo de refrigeración no es solo un inconveniente, es una pérdida de dinero y confort. Por eso actuamos con rapidez, precisión y técnicos certificados en Santiago de Chile.
+        </p>
+        <ul>
+          <li><strong>Transparencia Total:</strong> Presupuestos claros y sin sorpresas.</li>
+          <li><strong>Respuesta Inmediata:</strong> Atención técnica ágil en terreno.</li>
+          <li><strong>Garantía Escrita:</strong> Respaldo profesional en cada instalación y reparación.</li>
+        </ul>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto y Cotización Inmediata</h2>
+        <p>¿Necesitas una solución rápida y eficiente en climatización o refrigeración? Contáctanos y un asesor se comunicará a la brevedad.</p>
+        <p>
+          <strong>Teléfono y WhatsApp:</strong> <a href="https://wa.me/56993460120">+56 9 9346 0120</a><br>
+          <strong>Correo Electrónico:</strong> <a href="mailto:contacto@roraimasoluciones.cl">contacto@roraimasoluciones.cl</a><br>
+          <strong>Cobertura:</strong> Santiago y toda la Región Metropolitana, Chile.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Roraima Soluciones. Climatización de Hogar y Refrigeración Técnica en Santiago de Chile.</p>
+    </footer>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
